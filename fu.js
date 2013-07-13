@@ -41,8 +41,9 @@
     zipWith: zipWith
   }
 
+  var toStr = toString
   var isArray = Array.isArray || function (a) {
-    return {}.call(a) == '[object Array]'
+    return toStr.call(a) == '[object Array]'
   }
   var emptyList = 'empty list'
 
@@ -271,7 +272,7 @@
     while (++i < l)
       for (k in a[i]) {
         v = a[i][k]
-        r[k] = typeof v == 'object'
+        r[k] = isArray(v) || toStr.call(v) == '[object Object]'
           ? merge(v, {})
           : v
       }

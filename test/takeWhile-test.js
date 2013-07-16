@@ -17,6 +17,12 @@ module.exports = function (fu, assert) {
       deq(fu.takeWhile(fu.id, a), [])
     },
 
+    'take too many': function () {
+      deq(fu.takeWhile(function () {
+        return true
+      }, a), a)
+    },
+
     empty: function () {
       assert.deepEqual(fu.takeWhile(fu.id, []), [])
     },

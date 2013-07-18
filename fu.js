@@ -6,6 +6,8 @@
     all: all,
     and: and,
     any: any,
+    arity: arity,
+    binary: arity(2),
     comp: comp,
     compact: compact,
     concat: concat,
@@ -38,6 +40,8 @@
     tail: tail,
     take: take,
     takeWhile: takeWhile,
+    ternary: arity(3),
+    unary: arity(1),
     zipWith: zipWith
   }
 
@@ -328,6 +332,15 @@
     for (i; i < n; i += 1) r1[i] = a[i]
     for (i; i < l; i += 1) r2[j++] = a[i]
     return [r1, r2]
+  }
+
+  function arity(n, f) {
+    if (arguments.length == 1) return function (f) { return arity(n, f) }
+    return function () {
+      var i = 0, r = Array(n), a = arguments
+      for (i; i < n; i += 1) r[i] = a[i]
+      return f.apply(f, r)
+    }
   }
 
   function maybe(f) {

@@ -32,5 +32,12 @@ module.exports = {
     assert.isTrue(fu.nil([null, undefined, undefined]))
     assert.isFalse(fu.nil([null, null, false]))
     assert.isTrue(fu.nil([]))
+  },
+
+  unary: function (fu, assert) {
+    assert.deepEqual(
+      ['1', '2', '3'].map(fu.unary(parseInt)),
+      [1, 2, 3]
+    )
   }
 }

@@ -31,6 +31,7 @@
     merge: merge,
     min: min,
     nil: nil,
+    not: not,
     or: or,
     property: property,
     range: range,
@@ -341,6 +342,10 @@
       for (i; i < n; i += 1) r[i] = a[i]
       return f.apply(f, r)
     }
+  }
+
+  function not(x) {
+    return !x
   }
 
   function maybe(f) {

@@ -2,6 +2,8 @@
 
 the fastest eager-eval functional library for JavaScript.
 
+[![NPM version](https://badge.fury.io/js/fu.png)](http://badge.fury.io/js/fu)
+
 ## Install
 
     npm install fu

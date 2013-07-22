@@ -4,7 +4,7 @@
   "description": "Tiny and functional and fast",
   "main": "fu.js",
   "scripts": {
-    "test": "testla test"
+    "test": "./node_modules/testla/bin/testla test"
   },
   "dependencies": {},
   "repository": "git://github.com/goatslacker/fu.git",

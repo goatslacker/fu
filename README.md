@@ -2,6 +2,7 @@
 
 the fastest eager-eval functional library for JavaScript.
 
+[![Build Status](https://secure.travis-ci.org/goatslacker/fu.png)](http://travis-ci.org/goatslacker/fu)
 [![NPM version](https://badge.fury.io/js/fu.png)](http://badge.fury.io/js/fu)
 
 ## Install

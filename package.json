@@ -7,6 +7,9 @@
     "test": "./node_modules/testla/bin/testla test"
   },
   "dependencies": {},
+  "devDependencies": {
+    "testla": "*"
+  },
   "repository": "git://github.com/goatslacker/fu.git",
   "author": "Josh Perez <josh@goatslacker.com>",
   "license": "MIT"

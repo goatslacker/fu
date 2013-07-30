@@ -1,50 +1,20 @@
 /*jshint curly: false, latedef: false, eqeqeq: false, plusplus: false, newcap: false */
-(function () {
+;(function (name, definition) {
   'use strict';
-
-  module.exports = {
-    all: all,
-    and: and,
-    any: any,
-    arity: arity,
-    binary: arity(2),
-    comp: comp,
-    compact: compact,
-    concat: concat,
-    concatMap: concatMap,
-    curry: curry,
-    drop: drop,
-    dropWhile: dropWhile,
-    elem: elem,
-    filter: filter,
-    flip: flip,
-    foldl: foldl,
-    head: head,
-    id: id,
-    init: init,
-    intoArray: intoArray,
-    intoObject: intoObject,
-    last: last,
-    map: map,
-    max: max,
-    maybe: maybe,
-    merge: merge,
-    min: min,
-    nil: nil,
-    not: not,
-    or: or,
-    property: property,
-    range: range,
-    scanl: scanl,
-    seq: seq,
-    splitAt: splitAt,
-    tail: tail,
-    take: take,
-    takeWhile: takeWhile,
-    ternary: arity(3),
-    unary: arity(1),
-    zipWith: zipWith
+  if (typeof define == 'function') {
+    define(definition)
+  } else if (typeof module != 'undefined' && module.exports) {
+    module.exports = definition()
+  } else {
+    var Module = definition(), global = this, old = global[name]
+    Module.noConflict = function () {
+      global[name] = old
+      return Module
+    }
+    global[name] = Module
   }
+}).call(this, 'fu', function () {
+  'use strict';
 
   var toStr = toString
   var isArray = Array.isArray || function (a) {
@@ -353,4 +323,48 @@
       try { return f() } catch (e) { return null }
     }
   }
-}());
+
+  return {
+    all: all,
+    and: and,
+    any: any,
+    arity: arity,
+    binary: arity(2),
+    comp: comp,
+    compact: compact,
+    concat: concat,
+    concatMap: concatMap,
+    curry: curry,
+    drop: drop,
+    dropWhile: dropWhile,
+    elem: elem,
+    filter: filter,
+    flip: flip,
+    foldl: foldl,
+    head: head,
+    id: id,
+    init: init,
+    intoArray: intoArray,
+    intoObject: intoObject,
+    last: last,
+    map: map,
+    max: max,
+    maybe: maybe,
+    merge: merge,
+    min: min,
+    nil: nil,
+    not: not,
+    or: or,
+    property: property,
+    range: range,
+    scanl: scanl,
+    seq: seq,
+    splitAt: splitAt,
+    tail: tail,
+    take: take,
+    takeWhile: takeWhile,
+    ternary: arity(3),
+    unary: arity(1),
+    zipWith: zipWith
+  }
+});

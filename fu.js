@@ -324,10 +324,17 @@
     }
   }
 
+  function apply(f) {
+    return function (x) {
+      return f.apply(f, x)
+    }
+  }
+
   return {
     all: all,
     and: and,
     any: any,
+    apply: apply,
     arity: arity,
     binary: arity(2),
     comp: comp,

@@ -2,15 +2,25 @@
   "name": "fu",
   "version": "0.1.0",
   "description": "Tiny and functional and fast",
+  "author": "Josh Perez <josh@goatslacker.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goatslacker/fu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goatslacker/fu/issues"
+  },
   "main": "fu.js",
   "scripts": {
-    "test": "./node_modules/testla/bin/testla test"
+    "test": "testla test"
   },
-  "dependencies": {},
+  "files": [
+    "fu.js",
+    "fu.min.js",
+    "README.md"
+  ],
   "devDependencies": {
-    "testla": "*"
-  },
-  "repository": "git://github.com/goatslacker/fu.git",
-  "author": "Josh Perez <josh@goatslacker.com>",
-  "license": "MIT"
+    "testla": "~0.0.8"
+  }
 }

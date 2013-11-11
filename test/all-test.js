@@ -14,7 +14,7 @@ module.exports = function (fu, assert) {
     },
 
     unary: function () {
-      var all = fu.all(function (n) { return n * 0 == 0 })
+      var all = fu.all(function (n) { return n * 0 === 0 })
       assert.isFunction(all)
       assert.isTrue(all(a))
     }

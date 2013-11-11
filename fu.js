@@ -1,4 +1,4 @@
-/*jshint curly: false, latedef: false, eqeqeq: false, plusplus: false, newcap: false */
+/* global define, toString */
 ;(function (name, definition) {
   'use strict';
   if (typeof define == 'function') {

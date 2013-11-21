@@ -1,3 +1,5 @@
+/* jshint indent:false */
+
 module.exports = function (fu, assert) {
   var deq = assert.deepEqual
 

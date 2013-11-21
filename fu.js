@@ -2,6 +2,7 @@
  *  Licensed under the MIT License.
  */
 
+/* jshint strict: true */
 /* global define, toString */
 ;(function (name, definition) {
   'use strict';

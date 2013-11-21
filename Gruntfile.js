@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       options: {
         /*compress: true,*/
         mangle: true,
-        preserveComments: false,
+        preserveComments: 'some',
         report: 'min'
       },
       compress: {

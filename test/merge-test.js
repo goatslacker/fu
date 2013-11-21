@@ -1,4 +1,4 @@
-module.exports = function (fu, assert, err) {
+module.exports = function (fu, assert) {
   var deq = assert.deepEqual
 
   var a = { a: 1, b: 2 }

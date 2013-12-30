@@ -1,3 +1,8 @@
+/*! Copyright (c) 2013 Josh Perez <josh@goatslacker.com>
+ *  Licensed under the MIT License.
+ */
+
+/* jshint strict: true */
 /* global define, toString */
 ;(function (name, definition) {
   'use strict';

@@ -1,4 +1,6 @@
-module.exports = function (fu, assert, err) {
+/* jshint indent:false */
+
+module.exports = function (fu, assert) {
   var deq = assert.deepEqual
 
   var a = { a: 1, b: 2 }
